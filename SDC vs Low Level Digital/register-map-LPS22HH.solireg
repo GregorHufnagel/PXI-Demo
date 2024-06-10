@@ -1,0 +1,2029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <file>
+    <name>LPS22HH File</name>
+    <source>https://www.st.com/resource/en/datasheet/lps22hh.pdf</source>
+    <version>0.0.1</version>
+    <description>no description available</description>
+  </file>
+  <registerMap>
+    <name>LPS22HH_register_map</name>
+    <displayName>LPS22HH</displayName>
+    <developer>Navin Subramani</developer>
+    <contact></contact>
+    <ipBlockList>
+      <ipBlock>
+        <deviceName>LPS22HH</deviceName>
+        <ipBlockOffsetAddress>0x00</ipBlockOffsetAddress>
+        <description>Pressure Sensor</description>
+        <deviceType>Sensor</deviceType>
+        <revision Value="0.0.1"/>
+        <releaseDate>July 18, 2020</releaseDate>
+        <regGroupList>
+          <groupName>Control_Register</groupName>
+          <groupName>Sensor_Register</groupName>
+		  <groupName>FIFO_Register</groupName>
+        </regGroupList>
+      </ipBlock>
+    </ipBlockList>
+    <registerGroupList>
+      <registerGroup>
+        <groupName>Control_Register</groupName>
+        <groupOffsetAddress>0x0</groupOffsetAddress>
+        <description></description>
+        <registerList>
+          <register>
+            <regName>INTERRUPT_CFG</regName>
+            <address>0x0B</address>
+            <description>Interrupt register</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+          
+          <register>
+            <regName>THS_P_L</regName>
+            <address>0x0C</address>
+            <description>Pressure threshold registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>                      
+
+          <register>
+            <regName>THS_P_H</regName>
+            <address>0x0D</address>
+            <description>Pressure threshold registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>  
+
+          <register>
+            <regName>IF_CTRL</regName>
+            <address>0x0E</address>
+            <description>Interface control register</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>WHO_AM_I</regName>
+            <address>0x0F</address>
+            <description>Who am I</description>
+            <default>0xB3</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+		  
+		   <register>
+            <regName>CTRL_REG1</regName>
+            <address>0x10</address>
+            <description>Control registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>CTRL_REG2</regName>
+            <address>0x11</address>
+            <description>Control registers</description>
+            <default>0x10</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>CTRL_REG3</regName>
+            <address>0x12</address>
+            <description>Control registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+		  
+		   <register>
+            <regName>FIFO_CTRL</regName>
+            <address>0x13</address>
+            <description>FIFO configuration register</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+		  
+		   <register>
+            <regName>FIFO_WTM</regName>
+            <address>0x14</address>
+            <description></description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>REF_P_L</regName>
+            <address>0x15</address>
+            <description>Reference pressure registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>REF_P_H</regName>
+            <address>0x16</address>
+            <description>Reference pressure registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>RESERVED</regName>
+            <address>0x17</address>
+            <description>Reserved</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>RPDS_L</regName>
+            <address>0x18</address>
+            <description>Pressure offset registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+		   <register>
+            <regName>RPDS_H</regName>
+            <address>0x19</address>
+            <description>Pressure offset registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+        </registerList>
+        <fieldList>
+		
+          <field>
+            <fieldName>AUTOREFP</fieldName>
+            <description>Enable AUTOREFP function</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                normal mode
+              </def>
+              <value>1</value>
+              <def>
+                AUTOREFP enabled
+              </def>
+            </valueDefinition>
+          </field>
+        
+          <field>
+            <fieldName>RESET_ARP</fieldName>
+            <description>Reset AUTOREFP function</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>6</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                normal mode
+              </def>
+              <value>1</value>
+              <def>
+                reset AUTOREFP function
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>AUTOZERO</fieldName>
+            <description>Enable AUTOZERO function</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                normal mode
+              </def>
+              <value>1</value>
+              <def>
+                AUTOZERO enabled
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESET_AZ</fieldName>
+            <description>Reset AUTOZERO function</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                normal mode
+              </def>
+              <value>1</value>
+              <def>
+                 reset AUTOZERO function
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>DIFF_EN</fieldName>
+            <description>Enable interrupt generation</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                interrupt generation disabled
+              </def>
+              <value>1</value>
+              <def>
+                interrupt generation enabled
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>LIR</fieldName>
+            <description>Latch interrupt request to the INT_SOURCE (24h) register</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 interrupt request not latched
+              </def>
+              <value>1</value>
+              <def>
+                interrupt request latched
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PLE</fieldName>
+            <description>Enable interrupt generation on pressure low event</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 disable interrupt request
+              </def>
+              <value>1</value>
+              <def>
+                enable interrupt request on pressure value lower than preset threshold
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PHE</fieldName>
+            <description>Enable interrupt generation on pressure high event</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INTERRUPT_CFG</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 disable interrupt request
+              </def>
+              <value>1</value>
+              <def>
+                enable interrupt request on pressure value higher than preset threshold
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>THS</fieldName>
+            <description>threshold value for pressure interrupt generation</description>
+            <length>15</length>
+            <access>RW</access>
+            <parentRegisterList>
+			
+			
+              <parentRegister>
+                <regName>THS_P_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+			  
+			  <parentRegister>
+                <regName>THS_P_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>7</cropLength>
+              </parentRegister>
+			  
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+            </valueDefinition>
+          </field>
+		
+          <field>
+            <fieldName>INT_EN_I3C</fieldName>
+            <description>Enable INT1 pad with MIPI I3CSM. If the INT_EN_I3C bit is set, the INT1 pad is polarized as OUT</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 INT1 disabled with MIPI I3C^SM
+              </def>
+              <value>1</value>
+              <def>
+                 INT1 enabled with MIPI I3C^SM
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>SDA_PU_EN</fieldName>
+            <description>Enable pull-up on the SDA pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 SDA pin pull-up disconnected
+              </def>
+              <value>1</value>
+              <def>
+                SDA pin with pull-up
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>SDO_PU_EN</fieldName>
+            <description>Enable pull-up on the SDO pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                 SDO pin pull-up disconnected
+              </def>
+              <value>1</value>
+              <def>
+                SDO pin with pull-up
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PD_DIS_INT1</fieldName>
+            <description>Disable pull down on the INT1 pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                  INT1 pin with pull-down
+              </def>
+              <value>1</value>
+              <def>
+                 INT1 pin pull-down disconnected
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>I3C_DISABLE</fieldName>
+            <description>Disable MIPI I3C^SM interface</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   MIPI I3C^SM enabled
+              </def>
+              <value>1</value>
+              <def>
+                  MIPI I3C^SM disabled
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>I2C_DISABLE</fieldName>
+            <description>Disable I²C interface.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    I²C enabled
+              </def>
+              <value>1</value>
+              <def>
+                  I²C disabled
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>WHO_AM_I_BF</fieldName>
+            <description>Read only register - like status.</description>
+            <length>8</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>WHO_AM_I</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+		  
+          <field>
+            <fieldName>ODR</fieldName>
+            <description> Output data rate bit configurations</description>
+            <length>3</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>3</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   One-Shot
+              </def>
+              <value>1</value>
+              <def>
+                   1 Hz
+              </def>
+			  <value>2</value>
+              <def>
+                   10 Hz
+              </def>
+			  <value>3</value>
+              <def>
+                   25 Hz
+              </def>
+			  <value>4</value>
+              <def>
+                   50 Hz
+              </def>
+			  <value>5</value>
+              <def>
+                   75 Hz
+              </def>
+			  <value>6</value>
+              <def>
+                   100 Hz
+              </def>
+			  <value>7</value>
+              <def>
+                   200 Hz
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>EN_LPFP</fieldName>
+            <description>Enable low-pass filter on pressure data when Continuous mode is used.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    Low-pass filter disabled - ODR/2
+              </def>
+              <value>1</value>
+              <def>
+                   Low-pass filter enabled
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>LPFP_CFG</fieldName>
+            <description>LPFP_CFG: Low-pass configuration register</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    ODR/9 when EN_LPFP is enabled
+              </def>
+              <value>1</value>
+              <def>
+                   ODR/20 when EN_LPFP is enabled
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>BDU</fieldName>
+            <description>Block data update.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    continuous update
+              </def>
+              <value>1</value>
+              <def>
+                   output registers not updated until MSB and LSB have been read
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>SIM</fieldName>
+            <description>SPI Serial Interface Mode selection</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   4-wire interface
+              </def>
+              <value>1</value>
+              <def>
+                   3-wire interface
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>BOOT</fieldName>
+            <description>Reboots memory content.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   normal mode
+              </def>
+              <value>1</value>
+              <def>
+                    reboot memory content
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>INT_H_L</fieldName>
+            <description>Interrupt active-high, active-low</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>6</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   active high
+              </def>
+              <value>1</value>
+              <def>
+                    active low
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PP_OD</fieldName>
+            <description>Push-pull/open-drain selection on interrupt pad</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                  push-pull
+              </def>
+              <value>1</value>
+              <def>
+                   open-drain
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>IF_ADD_INC</fieldName>
+            <description>Register address automatically incremented during a multiple byte access with a serial interface (I²C or SPI)</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                  disable
+              </def>
+              <value>1</value>
+              <def>
+                   enable
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>SWRESET</fieldName>
+            <description>Software reset. The bit is self-cleared when the reset is completed</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   normal mode
+              </def>
+              <value>1</value>
+              <def>
+                   software reset
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>LOW_NOISE_EN</fieldName>
+            <description>Enables low noise (used only if ODR is lower than 100 Hz)</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   low-current mode
+              </def>
+              <value>1</value>
+              <def>
+                   low-noise mode
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>ONE_SHOT</fieldName>
+            <description>Enables one-shot</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   idle mode
+              </def>
+              <value>1</value>
+              <def>
+                   a new dataset is acquired
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>INT_F_FULL</fieldName>
+            <description>FIFO full flag on INT_DRDY pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                   FIFO empty
+              </def>
+              <value>1</value>
+              <def>
+                   FIFO full - 128 unread samples
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>INT_F_WTM</fieldName>
+            <description>FIFO threshold (watermark) status on INT_DRDY pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    FIFO is lower than FTH level
+              </def>
+              <value>1</value>
+              <def>
+                   FIFO is equal to or higher than FTH level
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>INT_F_OVR</fieldName>
+            <description>FIFO overrun status on INT_DRDY pin.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    not overwritten
+              </def>
+              <value>1</value>
+              <def>
+                    at least one sample in the FIFO has been overwritten
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>DRDY</fieldName>
+            <description>Data-ready signal on INT_DRDY pin</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    disable
+              </def>
+              <value>1</value>
+              <def>
+                   enable
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>INT_S</fieldName>
+            <description>Data signal on INT_DRDY pin control bits</description>
+            <length>2</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    Data signal (in order of priority: DRDY or INT_F_WTM or INT_F_OVR or INT_F_FULL)
+              </def>
+              <value>1</value>
+              <def>
+                    Pressure high (P_high)
+              </def>
+			  <value>2</value>
+              <def>
+                    Pressure low (P_low)
+              </def>
+			  <value>3</value>
+              <def>
+                    Pressure low OR high
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>STOP_ON_WTM</fieldName>
+            <description>Stop-on-FIFO watermark. Enables FIFO watermark level use.</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_CTRL</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    disable
+              </def>
+              <value>1</value>
+              <def>
+                    enable
+              </def>
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>TRIG_MODES</fieldName>
+            <description>Enables triggered FIFO modes</description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_CTRL</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>F_MODE</fieldName>
+            <description>Selects triggered FIFO modes</description>
+            <length>2</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_CTRL</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    Bypass
+              </def>
+              <value>1</value>
+              <def>
+                    FIFO mode or Bypass-ro-FIFO based on TRIG_MODES value
+              </def>
+			  <value>2</value>
+              <def>
+                    Continuous (Dynamic-Stream) or Bypass-to-Continuous (Dynamic-Stream)
+              </def>
+			  <value>3</value>
+              <def>
+                    Continuous (Dynamic-Stream) or Continuous (Dynamic-Stream)-to-FIFO
+              </def>			  
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>WTM</fieldName>
+            <description> FIFO threshold. Watermark level setting. </description>
+            <length>7</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_WTM</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>7</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>REFL</fieldName>
+            <description>the reference pressure value. </description>
+            <length>16</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>REF_P_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+			  <parentRegister>
+                <regName>REF_P_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RPDS</fieldName>
+            <description>the pressure offset value</description>
+            <length>16</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>RPDS_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+			  <parentRegister>
+                <regName>RPDS_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>THS_P_H</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>2</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>IF_CTRL</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG1</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+		  
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG2</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>2</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>CTRL_REG3</regName>
+                <regStartBit>6</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>4</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_CTRL</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>4</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>1</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_WTM</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>8</length>
+            <access>RW</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>RESERVED</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+
+
+        </fieldList>
+      </registerGroup>
+      <registerGroup>
+        <groupName>Sensor_Register</groupName>
+        <groupOffsetAddress>0x23</groupOffsetAddress>
+        <description>Sensor registers</description>
+        <registerList>
+		
+          <register>
+            <regName>INT_SOURCE</regName>
+            <address>0x01</address>
+            <description>Interrupt register</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_STATUS1</regName>
+            <address>0x02</address>
+            <description>FIFO status registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_STATUS2</regName>
+            <address>0x03</address>
+            <description>FIFO status registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>STATUS</regName>
+            <address>0x04</address>
+            <description>Status register</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+		  
+          <register>
+            <regName>PRESS_OUT_XL</regName>
+            <address>0x05</address>
+            <description>Pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>		  
+
+          <register>
+            <regName>PRESS_OUT_L</regName>
+            <address>0x06</address>
+            <description>Pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>PRESS_OUT_H</regName>
+            <address>0x07</address>
+            <description>Pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>TEMP_OUT_L</regName>
+            <address>0x08</address>
+            <description>Temperature output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>TEMP_OUT_H</regName>
+            <address>0x09</address>
+            <description>Temperature output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+
+        </registerList>
+        <fieldList>
+		
+          <field>
+            <fieldName>BOOT_ON</fieldName>
+            <description>Indication of Boot phase</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INT_SOURCE</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    Boot phase has ended
+              </def>
+              <value>1</value>
+              <def>
+                    Boot phase is running
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>IA</fieldName>
+            <description>Interrupt active.</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INT_SOURCE</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                     no interrupt has been generated
+              </def>
+              <value>1</value>
+              <def>
+                    one or more interrupt events have been generated
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PL</fieldName>
+            <description>Differential pressure Low</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INT_SOURCE</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                      no interrupt has been generated
+              </def>
+              <value>1</value>
+              <def>
+                     low differential pressure event has occurred
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>PH</fieldName>
+            <description>Differential pressure High</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INT_SOURCE</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                     no interrupt has been generated
+              </def>
+              <value>1</value>
+              <def>
+                     high differential pressure event has occurred
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>4</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>INT_SOURCE</regName>
+                <regStartBit>3</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>4</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>FSS</fieldName>
+            <description>FIFO stored data level, number of unread samples stored in FIFO</description>
+            <length>8</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_STATUS1</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                      FIFO empty
+              </def>
+              <value>128</value>
+              <def>
+                      FIFO full, 128 unread samples
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>FIFO_WTM_IA</fieldName>
+            <description>FIFO threshold (watermark) status</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_STATUS2</regName>
+                <regStartBit>7</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                      FIFO filling is lower than treshold level
+              </def>
+              <value>1</value>
+              <def>
+                      FIFO filling is equal or higher than treshold level
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>FIFO_OVR_IA</fieldName>
+            <description> FIFO overrun status.</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_STATUS2</regName>
+                <regStartBit>6</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                      FIFO is not completely full
+              </def>
+              <value>1</value>
+              <def>
+                      FIFO is full and at least one sample in the FIFO has been overwritten
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>FIFO_FULL_IA</fieldName>
+            <description> FIFO full status.</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_STATUS2</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                       FIFO is not completely filled
+              </def>
+              <value>1</value>
+              <def>
+                     FIFO is completely filled, no samples overwritten
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>5</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_STATUS2</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>5</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>T_OR</fieldName>
+            <description> Temperature data overrun</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>5</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                        no overrun has occurred
+              </def>
+              <value>1</value>
+              <def>
+                     a new data for temperature has overwritten the previous data
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>P_OR</fieldName>
+            <description>Pressure data overrun</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>4</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                        no overrun has occurred
+              </def>
+              <value>1</value>
+              <def>
+                     new data for pressure has overwritten the previous data
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>T_DA</fieldName>
+            <description>Temperature data available.</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>1</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                    new data for temperature is not yet available
+              </def>
+              <value>1</value>
+              <def>
+                    a new temperature data is generated
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>P_DA</fieldName>
+            <description>Pressure data available</description>
+            <length>1</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>1</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="String">
+			<value>0</value>
+              <def>
+                     new data for pressure is not yet available
+              </def>
+              <value>1</value>
+              <def>
+                     a new pressure data is generated
+              </def>
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>RESERVED</fieldName>
+            <description></description>
+            <length>4</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>2</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+			  <parentRegister>
+                <regName>STATUS</regName>
+                <regStartBit>6</regStartBit>
+                <bitFieldOffset>2</bitFieldOffset>
+                <cropLength>2</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>POUT</fieldName>
+            <description>pressure output value</description>
+            <length>24</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>PRESS_OUT_XL</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+              <parentRegister>
+                <regName>PRESS_OUT_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+              <parentRegister>
+                <regName>PRESS_OUT_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>16</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>TOUT</fieldName>
+            <description> the temperature output value</description>
+            <length>16</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>TEMP_OUT_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+			  <parentRegister>
+                <regName>TEMP_OUT_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister> 
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+			</valueDefinition>
+          </field>
+
+
+        </fieldList>
+      </registerGroup>
+
+      <registerGroup>
+        <groupName>FIFO_Register</groupName>
+        <groupOffsetAddress>0x77</groupOffsetAddress>
+        <description>Sensor registers</description>
+        <registerList>
+		
+          <register>
+            <regName>FIFO_DATA_OUT_PRESS_XL</regName>
+            <address>0x01</address>
+            <description>FIFO pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_DATA_OUT_PRESS_L</regName>
+            <address>0x02</address>
+            <description>FIFO pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_DATA_OUT_PRESS_H</regName>
+            <address>0x03</address>
+            <description>FIFO pressure output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_DATA_OUT_TEMP_L</regName>
+            <address>0x04</address>
+            <description>FIFO temperature output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+          <register>
+            <regName>FIFO_DATA_OUT_TEMP_H</regName>
+            <address>0x05</address>
+            <description>FIFO temperature output registers</description>
+            <default>0x00</default>
+            <length>8</length>
+            <private>False</private>
+          </register>
+
+        </registerList>
+        <fieldList>
+		
+          <field>
+            <fieldName>FIFO_P</fieldName>
+            <description>Pressure in FIFO buffer</description>
+            <length>24</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_DATA_OUT_PRESS_XL</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+              <parentRegister>
+                <regName>FIFO_DATA_OUT_PRESS_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+              <parentRegister>
+                <regName>FIFO_DATA_OUT_PRESS_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>16</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+            </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+            </valueDefinition>
+          </field>
+
+          <field>
+            <fieldName>FIFO_T</fieldName>
+            <description> Temperature in FIFO buffer</description>
+            <length>16</length>
+            <access>R</access>
+            <parentRegisterList>
+              <parentRegister>
+                <regName>FIFO_DATA_OUT_TEMP_L</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>0</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+              <parentRegister>
+                <regName>FIFO_DATA_OUT_TEMP_H</regName>
+                <regStartBit>0</regStartBit>
+                <bitFieldOffset>8</bitFieldOffset>
+                <cropLength>8</cropLength>
+              </parentRegister>
+             </parentRegisterList>
+            <valueDefinition Type="OneOnOne">
+            </valueDefinition>
+          </field>
+
+        </fieldList>
+      </registerGroup>
+
+    </registerGroupList>
+  </registerMap>
+  <dioMap>
+    <name>DIO_map</name>
+    <pinList>
+      <pin>
+        <pinName>Vdd</pinName>
+        <description>Control the DUT power</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Input</ioType>
+      </pin>
+	  <pin>
+        <pinName>Vdd_IO</pinName>
+        <description>Control the DUT IO Lines power</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Input</ioType>
+      </pin>
+	  <pin>
+        <pinName>CS</pinName>
+        <description>Chip Select pin, High for I2C</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Input</ioType>
+      </pin>
+	  <pin>
+        <pinName>SDO</pinName>
+        <description>MISO or read pin, Low for I2C</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Input</ioType>
+      </pin>
+	  <pin>
+        <pinName>Vdd_LB</pinName>
+        <description>Vdd read back pin</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Output</ioType>
+      </pin>
+	  <pin>
+        <pinName>Vdd_IO_LB</pinName>
+        <description>IO supply read back pin</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Output</ioType>
+      </pin>
+	  <pin>
+        <pinName>CS_LB</pinName>
+        <description>CS read back pin</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Output</ioType>
+      </pin>
+	  <pin>
+        <pinName>SDO_LB</pinName>
+        <description>MISO read back pin</description>
+        <deviceName>LPS22HH</deviceName>
+        <initialState>Low</initialState>
+        <ioType>Output</ioType>
+      </pin>
+     </pinList>
+    <functionList>
+      <function>
+        <functionName>PowerON</functionName>
+        <description>Power ON Device</description>
+        <pinStateList>
+          <pinState>
+            <pinName>Vdd</pinName>
+            <pinState>High</pinState>
+          </pinState>
+          <pinState>
+            <pinName>Vdd_IO</pinName>
+            <pinState>High</pinState>
+          </pinState>
+          </pinStateList>
+      </function>
+	  <function>
+        <functionName>PowerOFF</functionName>
+        <description>Power OFF Device</description>
+        <pinStateList>
+          <pinState>
+            <pinName>Vdd</pinName>
+            <pinState>Low</pinState>
+          </pinState>
+          <pinState>
+            <pinName>Vdd_IO</pinName>
+            <pinState>Low</pinState>
+          </pinState>
+		  <pinState>
+            <pinName>CS</pinName>
+            <pinState>Low</pinState>
+          </pinState><pinState>
+            <pinName>SDO</pinName>
+            <pinState>Low</pinState>
+          </pinState>
+          </pinStateList>
+      </function>
+	  <function>
+        <functionName>I2C_Mode_ON</functionName>
+        <description>I2C Mode ON</description>
+        <pinStateList>
+          <pinState>
+            <pinName>CS</pinName>
+            <pinState>High</pinState>
+          </pinState>
+          <pinState>
+            <pinName>SDO</pinName>
+            <pinState>Low</pinState>
+          </pinState>
+          </pinStateList>
+      </function>
+     </functionList>
+  </dioMap>
+</root>
