@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="A4A3E9FD5293C7E9B07D3BD483020C131241607C3AC16F8524EA3F6D5C35B5F8FA56F1EBDC8D748F17670C3C224918006AE81D057B7F653522BE5191D703B11D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.10.0.49734" Name="Digital Pattern Editor" Version="23.8.0" />
+	</SourceModelFeatureSet>
+	<Project xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+			<ProjectExplorer />
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="3" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
+			<DefaultTarget />
+			<EmbeddedDefinitionReference Id="212" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}CaptureResultsDefinition" Name="CaptureResults">
+				<CaptureResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="214" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}BurstResultsDefinition" Name="BurstResults">
+				<BurstResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="217" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DigitalScopeDefinition" Name="DigitalScope">
+				<DigitalScopeDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<FileReference Id="229" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}RegisterMapDefinition" Name="I2C Register Map.digireg" StoragePath="I2C Register Map.digireg" />
+			<FileReference Id="235" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DutBringupDefinition" Name="I2C Bringup.dutbringup" StoragePath="I2C Bringup.dutbringup" />
+			<FileReference Id="fa0df751df5f466098cc88ae2f846ea5" ModelDefinitionType="CaptureWaveformDefinition" Name="SDC_Capture.digicapture" StoragePath="Digital\Capture Waveforms\SDC_Capture.digicapture" />
+			<FileReference Id="a2d0c653029042a08c932a9a4bf53fad" ModelDefinitionType="PinLevelsDefinition" Name="PinLevels.digilevels" StoragePath="Digital\Levels\PinLevels.digilevels" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="fa6eb46bfaf942c3a7288a52ab011d8b" ModelDefinitionType="TimingDefinition" Name="I2C_Timeset.digitiming" StoragePath="Digital\Timing\I2C_Timeset.digitiming" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="d6959d0d54244c96adaed90181d763a1" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="I2C_Read_7bitSlaveAddress.digipat" StoragePath="Digital\Compiled Patterns\I2C\I2C_Read_7bitSlaveAddress.digipat" />
+			<FileReference Id="b0bb989b35fa443aad1828da956f7b45" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="I2C_Write_7bitSlaveAddress.digipat" StoragePath="Digital\Compiled Patterns\I2C\I2C_Write_7bitSlaveAddress.digipat" />
+			<FileReference Id="a3e54125a6834c13ac831152b8253284" ModelDefinitionType="PinMap" Name="PinMap_I2C.pinmap" StoragePath="Pin Maps\PinMap_I2C.pinmap" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="9a7acebe64a7421bb4cafaf34efdb40c" ModelDefinitionType="SpecificationsDefinition" Name="Specifications.specs" StoragePath="Specifications\Specifications.specs" />
+			<FileReference Id="4de6793f20cd44c2bd49b7053445e9c2" ModelDefinitionType="SourceWaveformDefinition" Name="SDC_Source.tdms" StoragePath="Digital\Source Waveforms\SDC_Source.tdms" />
+		</NameScopingEnvoy>
+		<EmbeddedDefinitionReference Id="7" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
+			<ProjectPropertiesDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+		</EmbeddedDefinitionReference>
+	</Project>
+	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PinMap schemaVersion="1.2" xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Instruments>
+		<NIDigitalPatternInstrument name="HSD_6571_C02_S03" numberOfChannels="32" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="CS_SPI" />
+		<DUTPin name="SCLK_SPI" />
+		<DUTPin name="MOSI_SPI" />
+		<DUTPin name="MISO_SPI" />
+		<SystemPin name="VDD" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="SPI4wire">
+			<PinReference pin="CS_SPI" />
+			<PinReference pin="SCLK_SPI" />
+			<PinReference pin="MOSI_SPI" />
+			<PinReference pin="MISO_SPI" />
+		</PinGroup>
+		<PinGroup name="SPI3wire">
+			<PinReference pin="CS_SPI" />
+			<PinReference pin="SCLK_SPI" />
+			<PinReference pin="MOSI_SPI" />
+		</PinGroup>
+	</PinGroups>
+	<Sites>
+		<Site siteNumber="0" />
+	</Sites>
+	<Connections>
+		<Connection pin="CS_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="7" />
+		<Connection pin="SCLK_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="5" />
+		<Connection pin="MOSI_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="1" />
+		<Connection pin="MISO_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="0" />
+		<SystemConnection pin="VDD" instrument="HSD_6571_C02_S03" channel="3" />
+	</Connections>
+</PinMap>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="40C7D99846BB2A3ACEF13516BB444212DEF7B9801F7298E4AC2FAEEFFE7E1C8A421A34FB0B782D5BB370B2DBFE36129DC09646A26FDB3B80F8B01522C5A166FD" Timestamp="1DB0DD09CEE0E48" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.10.0.49734" Name="Digital Pattern Editor" Version="23.8.0" />
+	</SourceModelFeatureSet>
+	<SystemViewDefinition DCPowerPinColumnInfo="" DCPowerPinSortDescriptions="" DigitalPinColumnInfo="" DigitalPinSortDescriptions="" LoadedPatternColumnInfo="" LoadedPatternSectionExpanded="False" LoadedPatternSortDescriptions="" RelayColumnInfo="" RelaySortDescriptions="" SequencerFlagColumnInfo="" SequencerFlagSectionExpanded="False" SequencerFlagSortDescriptions="" SequencerRegisterColumnInfo="" SequencerRegisterSortDescriptions="" xmlns="http://www.ni.com/PatternBasedDigital" />
+</SourceFile>

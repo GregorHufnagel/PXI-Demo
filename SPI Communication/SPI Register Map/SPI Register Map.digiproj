@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="8B3ABA0F6A13A01702A49B2516946473939C90260B67A1EE1C4B5C2D74DBB48CFF8DCDC0FCF1F063E86B751AC1592FFA2EB12DD9EB75CC728FF36F046E7774D7" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
+		<ParsableNamespace AssemblyFileVersion="9.10.0.49734" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
+		<ApplicationVersionInfo Build="9.10.0.49734" Name="Digital Pattern Editor" Version="23.8.0" />
+	</SourceModelFeatureSet>
+	<Project xmlns="http://www.ni.com/PlatformFramework">
+		<EnvoyManagerRootEnvoy Id="1" ModelDefinitionType="EnvoyManagerRootEnvoy" Name="RootEnvoy" />
+		<EmbeddedDefinitionReference Id="2" ModelDefinitionType="NationalInstruments.ProjectExplorer.Modeling.ProjectDataManager" Name="ProjectExplorer">
+			<ProjectExplorer />
+		</EmbeddedDefinitionReference>
+		<NameScopingEnvoy Id="3" ModelDefinitionType="DefaultTarget" Name="DefaultTarget">
+			<DefaultTarget />
+			<FileReference Id="19" ModelDefinitionType="TimingDefinition" Name="SPI Timing.digitiming" StoragePath="Timing\SPI Timing.digitiming" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="20" ModelDefinitionType="PinLevelsDefinition" Name="PinLevels.digilevels" StoragePath="Levels\PinLevels.digilevels" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<EmbeddedDefinitionReference Id="212" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}CaptureResultsDefinition" Name="CaptureResults">
+				<CaptureResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="214" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}BurstResultsDefinition" Name="BurstResults">
+				<BurstResultsDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Id="217" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DigitalScopeDefinition" Name="DigitalScope">
+				<DigitalScopeDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+			</EmbeddedDefinitionReference>
+			<FileReference Id="225" ModelDefinitionType="CaptureWaveformDefinition" Name="Capture Memory Buffer.digicapture" StoragePath="Waveforms\Capture Memory Buffer.digicapture" />
+			<FileReference Id="228" ModelDefinitionType="SourceWaveformDefinition" Name="Source Memory Buffer.tdms" StoragePath="Waveforms\Source Memory Buffer.tdms" />
+			<FileReference Id="229" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}RegisterMapDefinition" Name="SPI Register Map.digireg" StoragePath="SPI Register Map.digireg" />
+			<FileReference Id="235" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}DutBringupDefinition" Name="SPI Bringup.dutbringup" StoragePath="SPI Bringup.dutbringup" />
+			<FileReference Id="fc6a386f182f48cda62027c3022a9e3c" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI Read.digipat" StoragePath="Patterns\SPI Read.digipat" />
+			<FileReference Id="1f0d35c97fb8433a86adadedc5576dc0" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI Write.digipat" StoragePath="Patterns\SPI Write.digipat" />
+			<FileReference Id="da5db8e2e6d84e92a3ee3ee83afe1688" ModelDefinitionType="PinMap" Name="SPI Pin Map.pinmap" StoragePath="Pin Maps\SPI Pin Map.pinmap" p4:IsActive="True" xmlns:p4="http://www.ni.com/PatternBasedDigital" />
+			<FileReference Id="fe7fc57612714c23ba61cd7ad79286c2" ModelDefinitionType="SpecificationsDefinition" Name="Specifications.specs" StoragePath="Specifications\Specifications.specs" />
+			<FileReference Id="189b246db8d7498db839dbefd8271ad6" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI Read Clock Invert.digipat" StoragePath="Patterns\SPI Read Clock Invert.digipat" />
+			<FileReference Id="911a2ffd5f4846209f6be3a5f4dedd74" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI Write Clock Invert.digipat" StoragePath="Patterns\SPI Write Clock Invert.digipat" />
+			<SourceFileReference Id="6a2a35ed19844c2fb74c7967db8b30ce" ModelDefinitionType="{http://www.ni.com/PatternBasedDigital}SystemViewDefinition" Name="SystemView.digisysview" StoragePath="SystemView.digisysview" />
+			<FileReference Id="5759ab3b85b943eab645c499ae454ec7" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="SPI_All.digipat" StoragePath="Patterns\SPI_All.digipat" />
+		</NameScopingEnvoy>
+		<EmbeddedDefinitionReference Id="7" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
+			<ProjectPropertiesDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
+		</EmbeddedDefinitionReference>
+	</Project>
+	<ProjectInformation xmlns="http://www.ni.com/PlatformFramework" />
+</SourceFile>

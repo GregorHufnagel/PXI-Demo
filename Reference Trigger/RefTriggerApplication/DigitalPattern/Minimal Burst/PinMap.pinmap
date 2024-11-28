@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PinMap xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.5">
+	<Instruments>
+		<NIDigitalPatternInstrument name="HSD_6571_C02_S03" numberOfChannels="32" group="Digital" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="SPIData" />
+		<DUTPin name="SPICLock" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="PinGroup1">
+			<PinReference pin="SPIData" />
+			<PinReference pin="SPICLock" />
+		</PinGroup>
+	</PinGroups>
+	<Sites>
+		<Site siteNumber="0" />
+	</Sites>
+	<Connections>
+		<Connection pin="SPIData" siteNumber="0" instrument="HSD_6571_C02_S03" channel="28" />
+		<Connection pin="SPICLock" siteNumber="0" instrument="HSD_6571_C02_S03" channel="27" />
+	</Connections>
+</PinMap>

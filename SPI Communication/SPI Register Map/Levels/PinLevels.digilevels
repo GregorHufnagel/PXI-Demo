@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PinLevelsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/PinLevels">
+  <PinLevelsSheet>
+    <DigitalPinLevelSets>
+      <DigitalPinLevelSet pin="CS">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDDIO</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT chip-select pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="SCL">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDDIO</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT clock pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="MOSI">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDDIO</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT data input pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="MISO">
+        <Vil>DC.Vil</Vil>
+        <Vih>DC.Vih</Vih>
+        <Vol>DC.Vol</Vol>
+        <Voh>DC.Voh</Voh>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDDIO</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT data output pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VDD">
+        <Vih>DC.VDD</Vih>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDD</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT's power supply pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+      <DigitalPinLevelSet pin="VDDIO">
+        <Vih>DC.VDDIO</Vih>
+        <Iol>DC.Iol</Iol>
+        <Ioh>DC.Ioh</Ioh>
+        <Vcom>DC.VDDIO</Vcom>
+        <TerminationMode>HighZ</TerminationMode>
+        <Comment>DUT's digital interface power supply pin electrical parameters</Comment>
+      </DigitalPinLevelSet>
+    </DigitalPinLevelSets>
+  </PinLevelsSheet>
+</PinLevelsFile>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
+  <Section name="NIDigital">
+    <f:Formula symbol="tOne_tick">
+      <f:Definition>10 ns</f:Definition>
+      <f:Comment>Digital Pattern instrument Minimum period</f:Comment>
+    </f:Formula>
+  </Section>
+  <Section name="SPI">
+    <f:Formula symbol="Clk_Freq">
+      <f:Definition>100000 Hz</f:Definition>
+      <f:Comment>SPI Clock Frequency</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Clk_Period">
+      <f:Definition>1 / SPI.Clk_Freq</f:Definition>
+      <f:Comment>SPI Clock Period</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Clk_High">
+      <f:Definition>SPI.Clk_Period / 2</f:Definition>
+      <f:Comment>SPI Clock High Time</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="Clk_Low">
+      <f:Definition>SPI.Clk_Period / 2</f:Definition>
+      <f:Comment>SPI Clock Low Time</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="CS_Lead">
+      <f:Definition>SPI.Clk_Period</f:Definition>
+      <f:Comment>CS Lead time before first clock edge</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="CS_Trail">
+      <f:Definition>SPI.Clk_Period</f:Definition>
+      <f:Comment>CS Trail time before CS goes high</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="CS_IdleStart">
+      <f:Definition>SPI.Clk_Period</f:Definition>
+      <f:Comment>CS Idle time before start</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="CS_IdleEnd">
+      <f:Definition>SPI.Clk_Period</f:Definition>
+      <f:Comment>CS Idle time after CS goes high</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="MOSI_Setup">
+      <f:Definition>SPI.Clk_Period / 4</f:Definition>
+      <f:Comment>Data Setup Time in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="MOSI_Hold">
+      <f:Definition>SPI.Clk_Period / 4</f:Definition>
+      <f:Comment>Data Hold Time in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="tReadShift">
+      <f:Definition>0</f:Definition>
+      <f:Comment>Compare strobe shift from the sampling edge</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL_CS">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Max voltage read as 0 by DUT in CS line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL_SCLK">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Max voltage read as 0 by DUT in SCLK line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL_MOSI">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Max voltage read as 0 by DUT in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL_MISO">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Max voltage read as 0 by DUT in MISO line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH_CS">
+      <f:Definition>1.8 V</f:Definition>
+      <f:Comment>Min voltage read as 1 by DUT in CS line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH_SCLK">
+      <f:Definition>1.8 V</f:Definition>
+      <f:Comment>Min voltage read as 1 by DUT in SCLK line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH_MOSI">
+      <f:Definition>1.8 V</f:Definition>
+      <f:Comment>Min voltage read as 1 by DUT in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIH_MISO">
+      <f:Definition>1.8 V</f:Definition>
+      <f:Comment>Min voltage read as 1 by DUT in MISO line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL_CS">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Max voltage sent as 0 by DUT in CS line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL_SCLK">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Max voltage sent as 0 by DUT in SCLK line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL_MOSI">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Max voltage sent as 0 by DUT in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL_MISO">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Max voltage sent as 0 by DUT in MISO line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH_CS">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Min voltage sent as 1 by DUT in CS line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH_SCLK">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Min voltage sent as 1 by DUT in SCLK line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH_MOSI">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Min voltage sent as 1 by DUT in MOSI line</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH_MISO">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Min voltage sent as 1 by DUT in MISO line</f:Comment>
+    </f:Formula>
+  </Section>
+  <Section name="DIO">
+    <f:Formula symbol="VIH">
+      <f:Definition>1.8 V</f:Definition>
+      <f:Comment>Min voltage read as 1 by DUT in DIO pin</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOH">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Min voltage sent as 1 by DUT in DIO pin</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VIL">
+      <f:Definition>0 V</f:Definition>
+      <f:Comment>Max voltage read as 0 by DUT in DIO pin</f:Comment>
+    </f:Formula>
+    <f:Formula symbol="VOL">
+      <f:Definition>0.9 V</f:Definition>
+      <f:Comment>Max voltage sent as 0 by DUT in DIO pin</f:Comment>
+    </f:Formula>
+  </Section>
+</Specifications>

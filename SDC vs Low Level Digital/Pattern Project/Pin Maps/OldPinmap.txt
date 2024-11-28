@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PinMap schemaVersion="1.2" xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Instruments>
+		<NIDigitalPatternInstrument name="HSD_6571_C02_S03" numberOfChannels="32" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="SCL_I2C" />
+		<DUTPin name="SDA_I2C" />
+		<DUTPin name="CS_SPI" />
+		<DUTPin name="SCLK_SPI" />
+		<DUTPin name="MOSI_SPI" />
+		<DUTPin name="MISO_SPI" />
+		<SystemPin name="VDD" />
+		<SystemPin name="VDDIO" />
+		<SystemPin name="CS_ReadBack" />
+		<SystemPin name="Vdd_ReadBack" />
+		<SystemPin name="VddIO_ReadBack" />
+		<SystemPin name="MISO_ReadBack" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="I2C">
+			<PinReference pin="SCL_I2C" />
+			<PinReference pin="SDA_I2C" />
+		</PinGroup>
+		<PinGroup name="SPI4wire">
+			<PinReference pin="CS_SPI" />
+			<PinReference pin="SCLK_SPI" />
+			<PinReference pin="MOSI_SPI" />
+			<PinReference pin="MISO_SPI" />
+		</PinGroup>
+		<PinGroup name="SPI3wire">
+			<PinReference pin="CS_SPI" />
+			<PinReference pin="SCLK_SPI" />
+			<PinReference pin="MOSI_SPI" />
+		</PinGroup>
+	</PinGroups>
+	<Relays></Relays>
+	<RelayGroups></RelayGroups>
+	<RelayConfigurations></RelayConfigurations>
+	<Sites>
+		<Site siteNumber="0" />
+	</Sites>
+	<Connections>
+		<Connection channel="12" instrument="HSD_6571_C02_S03" pin="SCL_I2C" siteNumber="0" />
+		<Connection channel="3" instrument="HSD_6571_C02_S03" pin="SDA_I2C" siteNumber="0" />
+		<Connection pin="CS_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="2" />
+		<Connection pin="SCLK_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="23" />
+		<Connection pin="MOSI_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="22" />
+		<Connection pin="MISO_SPI" siteNumber="0" instrument="HSD_6571_C02_S03" channel="21" />
+		<SystemConnection pin="VDD" instrument="HSD_6571_C02_S03" channel="5" />
+		<SystemConnection pin="VDDIO" instrument="HSD_6571_C02_S03" channel="1" />
+		<SystemConnection pin="Vdd_ReadBack" instrument="HSD_6571_C02_S03" channel="19" />
+		<SystemConnection pin="VddIO_ReadBack" instrument="HSD_6571_C02_S03" channel="18" />
+		<SystemConnection pin="CS_ReadBack" instrument="HSD_6571_C02_S03" channel="17" />
+		<SystemConnection pin="MISO_ReadBack" instrument="HSD_6571_C02_S03" channel="16" />
+	</Connections>
+</PinMap>

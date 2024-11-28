@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PinMap xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.5">
+	<Instruments>
+		<NIDigitalPatternInstrument name="6570" numberOfChannels="32" group="Digital" />
+	</Instruments>
+	<Pins>
+		<DUTPin name="UART_TX_07" />
+		<DUTPin name="UART_RX_06" />
+		<DUTPin name="Vext" />
+	</Pins>
+	<PinGroups>
+		<PinGroup name="UART">
+			<PinReference pin="UART_TX_07" />
+			<PinReference pin="UART_RX_06" />
+		</PinGroup>
+	</PinGroups>
+	<Sites>
+		<Site siteNumber="0" />
+	</Sites>
+	<Connections>
+		<Connection pin="Vext" siteNumber="0" instrument="6570" channel="13" />
+		<Connection pin="UART_RX_06" siteNumber="0" instrument="6570" channel="6" />
+		<Connection pin="UART_TX_07" siteNumber="0" instrument="6570" channel="7" />
+	</Connections>
+</PinMap>
