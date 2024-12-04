@@ -4,7 +4,7 @@
             "name": "windows-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Program Files/IVI Foundation/IVI/Include"
+                "C:/Program Files/IVI Foundation/IVI/Include/**"
             ],
             "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
             "cStandard": "${default}",

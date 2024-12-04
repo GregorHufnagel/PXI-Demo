@@ -1,7 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include "nidcpower.h"
+
+extern "C" { 
+#include <nidcpower.h>
+}
+
 #include <vector>
 
 using namespace std;
